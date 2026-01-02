@@ -28,4 +28,22 @@ def create_table():
                     )""")
     connection.commit()
 
-create_table()
+# create_table()
+def to_see():
+    connection = get_connection()
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT * FROM start")
+    rows = cursor.fetchall()
+
+    for row in rows:
+        print(row)
+
+    cursor.close()
+    connection.close()
+def to_change(name,id):
+    connection = get_connection()
+    cursor = connection.cursor()
+    cursor.execute("UPDATE start SET name = %s WHERE id = %s",(name, id))
+    connection.commit()
+
