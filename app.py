@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for
-
+from link import *
 app = Flask(__name__)
 
 
