@@ -2,12 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel='stylesheet' href="{{ url_for('static', filename='css/style.css') }}">
-    {% block head %}{% endblock %}
+    <title>Flask App</title>
 
+    <!-- CSS connection -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    {% block body %}{% endblock %}
+    {% block body %}
+        <div class="information">
+    <h1>informations</h1>
+    <form>
+        <label>Name: </label>
+        <input type="text" placeholder="your name" /><br/><br/>
+        <label>Surname: </label>
+        <input type="text" placeholder="your surname" /><br/><br/>
+        <label>Age: </label>
+        <input type="number" placeholder="your age" /><br/><br/>
+
+        <label>Special-id: </label>
+        <input type="text" placeholder="your special-id" /><br/><br/>
+        <label>Birth-date: </label>
+        <input type="text" placeholder="your birth-date" /><br/><br/>
+    </form>
+    <button class="button">SUBIMIT</button>
+</div>
+    {% endblock %}
 </body>
 </html>

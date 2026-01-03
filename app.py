@@ -3,12 +3,12 @@ from link import *
 app = Flask(__name__)
 
 
+# @app.route('/')
+# def home():
+#     return render_template('link.html')
+
+
 @app.route('/')
-def home():
-    return render_template('link.html')
-
-
-@app.route('/main')
 def main():
     return render_template('base.html')
 
